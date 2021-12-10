@@ -127,7 +127,7 @@ body {
 
 .category {
   margin-right: 1rem;
-  word-wrap: none;
+  word-wrap: normal;
   white-space: nowrap;
   border: 1px solid #CCC;
   border-radius: 900px;
@@ -206,4 +206,48 @@ body {
   width: 36px;
   height: 36px;
   background-color: #AAA;
+}
+
+@media(max-width: 768px){
+  .primary{
+    grid-column: 1 / 3;
+  }
+  .secondary{
+    grid-column: 1 / 3;
+  }
+}
+
+div.view{
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-auto-rows: minmax(100px, auto);
+  gap: .5em;
+}
+.primary{
+
+}
+
+.secondary{
+
+}
+
+#player1{
+  width: 100%;
+}
+
+.primary .title{
+  font-size: 1.5rem;
+}
+
+.primary .metadata {
+  display: flex;
+  justify-content: space-between;
+}
+
+.primary .infoBottom{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

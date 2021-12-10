@@ -1,0 +1,45 @@
+.container {
+    display: grid;
+    grid-template-areas:
+            'header header header'
+            'menu main top'
+            'menu main aside'
+            'menu main bottom'
+            'footer footer footer';
+    grid-gap: .5rem;
+    height: 100vh;
+    grid-template-columns: 300px 1fr 300px;
+    grid-template-rows: 100px 150px 1fr 150px 100px;
+
+}
+
+.container div{
+    background-color: skyblue;
+    padding: 20px;
+    border: 1px solid #000;
+    justify-items: center;
+    align-items: center;
+}
+
+.header {
+    grid-area: header;
+}
+
+.menu {
+    grid-area: menu;
+}
+.main {
+    grid-area: main;
+}
+.top {
+    grid-area: top;
+}
+.aside {
+    grid-area: aside;
+}
+.bottom {
+    grid-area: bottom;
+}
+.footer {
+    grid-area: footer;
+}
