@@ -1,0 +1,189 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial,Helvetica,sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+#site__wrap {
+    background-color: white;
+    height: 100vh;
+    display: grid;
+    grid-template-columns:
+        1fr
+        repeat(4,minmax(0,272px))
+        1fr
+    ;
+    grid-gap: 0px;
+    grid-template-rows:
+        104px
+        215px
+        min-content
+        min-content
+        1fr
+;
+    grid-template-areas:
+        ". header header header header ."
+        "featured_header featured_header featured_header featured_header featured_header featured_header "
+        ". featured_main featured_main featured_main featured_profile ."
+        " . content content content content . "
+        "footer footer footer footer footer footer "
+;
+}
+
+/*#site__wrap > div{*/
+/*    background-color: blue;*/
+
+/*}*/
+
+.header{
+    background-color: white;
+    grid-area: header;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .5rem;
+}
+
+
+
+.header .logo{
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+}
+
+.header .nav{
+    list-style: none;
+    padding: 0px;
+    display: flex;
+    gap: .5rem;
+    font-size: 1rem;
+}
+
+.header .nav a{
+    text-decoration: none;
+    cursor: pointer;
+    border: 2px solid #F2AB9B;
+    color: #F2AB9B;
+    border-radius: 50em;
+    padding: 15px 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.header .nav a:hover, .header .nav .active{
+    background-color: #F2AB9B;
+    color: white;
+}
+
+.featured_header{
+    background-image: url('http://unsplash.it/1024/234?gravity=center');
+    grid-area: featured_header;
+    background-size: cover;
+}
+.featured_main{
+    grid-area: featured_main;
+    display: flex;
+    flex-flow: column;
+    padding: .5rem;
+
+}
+.featured_main h1{
+    color: #707070;
+}
+.featured_main p {
+    color: #707070;
+}
+.featured_main .btn{
+    text-decoration: none;
+    cursor: pointer;
+    background-color: #5A8C87;
+    border: 2px solid #5A8C87;
+    color: white;
+    border-radius: 50em;
+    padding: 15px 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+    width: 140px;
+    align-self: flex-end;
+}
+
+.featured_profile{
+    grid-area: featured_profile;
+    padding: .5rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.content{
+    grid-area: content;
+    display: flex;
+    justify-content: space-between;
+    padding: .5rem;
+
+}
+.content img{
+}
+.footer{
+    background-color: #333;
+    color: grey;
+    text-align: center;
+    padding-top: 2rem;
+    grid-area: footer;
+}
+
+@media screen and (max-width:480px) {
+    #site__wrap {
+        grid-template-areas:
+        "header header header header header header"
+        "featured_header featured_header featured_header featured_header featured_header featured_header "
+        "featured_main featured_main featured_main featured_main featured_main featured_main "
+        "featured_profile featured_profile featured_profile featured_profile featured_profile featured_profile"
+        "content content content content content content"
+        "footer footer footer footer footer footer "
+    ;
+        grid-template-rows:
+        min-content
+        215px
+        min-content
+        min-content
+        1fr
+    ;
+    }
+    .featured_profile{
+        display: none;
+    }
+
+    .header .nav{
+        list-style: none;
+        padding: 0px;
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+        font-size: 1rem;
+    }
+    .header .nav a{
+        text-decoration: none;
+        cursor: pointer;
+        border: 2px solid #F2AB9B;
+        color: #F2AB9B;
+        border-radius: 50em;
+        padding: 15px 30px;
+        text-transform: uppercase;
+        font-weight: bold;
+        display: inline-block;
+    }
+
+    .header .nav a:hover, .header .nav .active{
+        background-color: #F2AB9B;
+        color: white;
+    }
+
+    .content{
+        flex-direction: column;
+    }
+}
