@@ -1,0 +1,43 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+#container{
+    display: grid;
+    grid-template: 100px 1fr 80px / 1fr 80px;
+    grid-template-areas:
+    "header header"
+    "main aside"
+    "footer footer";
+    height: 100vh;
+    padding: .5rem;
+}
+
+header{
+    grid-area: header;
+    background-color: grey;
+    padding: .5rem;
+
+}
+
+main {
+    grid-area: main;
+    background-color: skyblue;
+    padding: .5rem;
+
+}
+
+aside{
+    grid-area: aside;
+    padding: .5rem;
+    background-color: oldlace;
+
+}
+
+footer {
+    grid-area: footer;
+    background-color: honeydew;
+    padding: .5rem;
+
+}

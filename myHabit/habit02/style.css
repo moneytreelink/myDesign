@@ -1,0 +1,36 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+#container__wrap{
+    display: grid;
+    grid-template: 100px 1fr 100px / 100px 1fr;
+    grid-template-areas:
+    "header header"
+    "aside main"
+    "footer footer"
+    ;
+    height: 100vh;
+}
+
+header{
+    grid-area: header;
+    background-color: green;
+}
+
+aside{
+    grid-area: aside;
+    background-color: darkseagreen;
+}
+
+main{
+    grid-area: main;
+    background-color: black;
+    color: white;
+}
+
+footer{
+    grid-area:footer;
+    background-color: grey;
+}

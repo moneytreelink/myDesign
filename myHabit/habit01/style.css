@@ -2,3 +2,35 @@ body {
     margin: 0;
     padding: 0;
 }
+
+#wrap__container {
+    display: grid;
+    grid-template-columns: 1fr 100px;
+    grid-template-rows: 100px 1fr 80px;
+    grid-template-areas:
+        "header header"
+        "main aside"
+        "footer footer"
+    ;
+    height: 100vh;
+}
+
+header{
+    grid-area: header;
+    background-color: greenyellow;
+}
+
+aside{
+    grid-area: aside;
+    background-color: blue;
+}
+
+main{
+    grid-area: main;
+    background-color: royalblue;
+}
+
+footer{
+    grid-area: footer;
+    background-color: darkseagreen;
+}
