@@ -1,0 +1,99 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family:'Malgun Gothic','맑은 고딕',돋움,Dotum,굴림,Gulim,'Apple SD Gothic Neo',sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+div.topbar{
+    background-color: #DDDDDD;
+    padding: .5rem;
+    display: flex;
+    justify-content: space-between;
+    font-size: .7rem;
+
+}
+
+.topbar .a__group > a{
+    margin-right: .8rem;
+}
+
+.logobar{
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+
+}
+
+#container{
+    display: grid;
+    grid-template: max-content max-content 1fr 100px / 4fr 1fr ;
+    grid-template-areas:
+    "header header"
+    "nav nav"
+    "main aside"
+    "footer footer"
+    ;
+    height: 100vh;
+}
+
+.logo{
+    border-radius: 10%;
+}
+
+.menubar {
+    border-top: 3px solid black;
+    border-bottom: 1px solid #DDDDDD;
+    margin-bottom: .5rem;
+    display: flex;
+    justify-content: space-between;
+    font-size: .9rem;
+
+    padding: .5rem;
+}
+
+.menubar a___group,.menubar b___group{
+    align-self: center;
+}
+
+.menubar a{
+    margin: 0 .3rem;
+}
+
+#container > *{
+
+}
+
+header{
+    grid-area: header;
+}
+
+nav{
+    grid-area: nav;
+}
+
+main{
+    grid-area: main;
+    background-color: black;
+    color: white;
+    height: 300vh;
+}
+
+aside{
+    grid-area: aside;
+    background-color: maroon;
+    height: 500vh;
+}
+
+footer{
+    grid-area: footer;
+    background-color: grey;
+}

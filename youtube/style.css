@@ -1,0 +1,121 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family:'Malgun Gothic','맑은 고딕',돋움,Dotum,굴림,Gulim,'Apple SD Gothic Neo',sans-serif;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/****************************************************************/
+/* header start */
+.nav__tags{
+    border-top: 1px solid #DDDDDD;
+    border-bottom:  1px solid #777777;
+    display: flex;
+    justify-content: center ;
+    column-gap: .5rem;
+    padding: .5rem 0;
+}
+
+.nav__tags > a{
+    padding: 8px 22px;
+    border-radius: 900px;
+    border: 1px solid #DDD;
+    transition: background-color 150ms;
+    background-color: #F0F0F0;
+}
+.nav__tags > a:hover{
+    background-color: #DDD;
+}
+
+.topbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search__input {
+    width: 100%;
+    font-size: inherit;
+    padding: .4em;
+    border: 1px solid #777;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+
+}
+
+.search-bar {
+    display: flex;
+    flex-grow: 1;
+    margin: 0 2rem 0 4rem;
+}
+
+
+.search__btn{
+    display: flex;
+    align-items: center;
+    padding: 0 1.25rem;
+    border: 1px solid #777;
+    background-color: #f8f8f8;
+
+}
+
+.img__logo{
+    height: 20px;
+}
+
+.topbar__channel__icon{
+    border-radius: 50%;
+}
+
+.button__group{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* header end*/
+/****************************************************************/
+
+
+
+/****************************************************************/
+/* video card start */
+
+
+.bottomArea{
+    display: flex;
+
+}
+
+.channel_icon > img{
+    border-radius: 50%;
+    margin-right: .5rem;
+}
+
+.details{
+    display: flex;
+    flex-direction: column;
+}
+a.title{
+    font-weight: bold;
+    color: black;
+}
+
+.vitems{
+    background-color: #DDDDDD;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+    justify-items: center;
+    gap: 3rem 1rem;
+    padding: 1.5rem;
+}
+/* video card end*/
+/****************************************************************/
