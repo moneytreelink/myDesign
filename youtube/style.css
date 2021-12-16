@@ -13,6 +13,11 @@ a {
     color: black;
 }
 
+li{
+    list-style: none;
+    margin: 0;
+}
+
 /****************************************************************/
 /* header start */
 .nav__tags{
@@ -125,13 +130,12 @@ a.title{
 /*******************************************************************/
 /* video view page */
 
-/* video view page */
-/*******************************************************************/
+
 div.container__view{
     display: grid;
-    grid-template: max-content max-content / 70% 30%;
+    grid-template: 1fr 1fr / 70% 30%;
     grid-template-areas:
-    "player player"
+    "player list"
     "main list"
     ;
     height: 100vh;
@@ -139,22 +143,83 @@ div.container__view{
 
 }
 
-div__player{
+.div__player{
     grid-area: player;
+    display: flex;
+    margin: 0;
 }
 .player__video{
     width: 100%;
-    height: 100%;
 }
 
 
-div__main{
+.div__main{
     grid-area: main;
-    background-color: black;
-    color: white;
+    display: flex;
+    flex-direction: column;
 }
 
-ul__list{
-    grid-area: list;
-    background-color: purple;
+p.main__title{
+    font-size: 1.5rem;
 }
+
+.main__mainInfo{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid #d3d3d3;
+    padding-bottom: 1rem;
+}
+
+.mainInfo__metadata{
+    color: #777777;
+}
+
+.channelInfo__topRow{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+
+.topRow__channelInfo{
+    display: flex;
+    align-items: center;
+}
+
+.topRow__channelInfo > a > img{
+    border-radius: 50%;
+}
+
+.channelInfo__metadata{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+}
+
+/***********************************************************/
+/* right List */
+.ul__list{
+    grid-area: list;
+    margin: 0;
+    padding: .5rem;
+}
+
+.ul__list > li{
+    display: flex;
+    font-size: .9rem;
+    gap: .5rem;
+    margin-bottom: .5rem;
+}
+
+
+
+.ul__list > li .metadata,
+.ul__list > li .info__channelName{
+    font-size: .8rem;
+    color: #777777;
+}
+
+/* video view page */
+/*******************************************************************/
