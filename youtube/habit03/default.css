@@ -12,7 +12,7 @@
     --avatar-size: 36px;
 
     /* Font Size*/
-    --font-large:18px;
+    --font-large:1.5rem;
     --font-medium:14px;
     --font-small: 12px;
     --font-micro:10px;
@@ -28,6 +28,8 @@ font-size: var(--font-large);
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
 }
 
 body {
@@ -35,3 +37,99 @@ body {
 }
 
 
+.view__container{
+    display: grid;
+    grid-template: 1fr 1fr / 7fr 3fr;
+    grid-template-areas:
+    "player list"
+    "main list";
+    height: 100vh;
+    padding: 1rem;
+}
+
+#player{
+    grid-area: player;
+}
+
+#player > video{
+    width: 100%;
+    height: 100%;
+}
+
+#main {
+    grid-area: main ;
+}
+
+#main tags{
+    display: flex;
+    margin-top: 1rem;
+}
+
+#main .title{
+    font-size: var(--font-large);
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+#main .bottom{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    align-items: center;
+}
+
+#main .bottom .metadata{
+    font-size: var(--font-medium);
+    color: grey;
+    align-items: center;
+}
+
+#main .channel{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+#main .channel .left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#main .channel .left > div{
+    margin-left: .5rem;
+}
+
+#main .context{
+    margin-left: 2rem;
+}
+
+
+
+#list {
+    grid-area: list;
+}
+
+#list li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#list li > .right{
+    margin-left: .5rem;
+    margin-bottom: .5rem;
+}
+
+#list li .title{
+    font-size: var(--font-large);
+    font-weight: bold;
+}
+
+#list li .cname,#list li .metadata{
+    font-size: var(--font-medium);
+    color: grey;
+}
