@@ -28,10 +28,128 @@ font-size: var(--font-large);
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    list-style: none    ;
+}
+
+a{
+    text-decoration: none;
+    color: black;
 }
 
 body {
     font-family:'Malgun Gothic','맑은 고딕',돋움,Dotum,굴림,Gulim,'Apple SD Gothic Neo',sans-serif;
 }
 
+#view__container{
+    display: grid;
+    grid-template: 1fr 1fr / 7fr 3fr;
+    grid-template-areas:
+    "player list"
+    "main list";
+    height: 100vh;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+#player{
+    grid-area: player;
+}
+
+#player > video{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+#main{
+    grid-area: main;
+}
+
+#main .title{
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+#main .tags{
+    margin-top: 1rem;
+
+}
+
+#main .tags > a{
+    margin-right: .5rem;
+    color: blue;
+}
+
+#main .bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    margin-top: 1rem;
+    border-bottom: 2px solid #777777;
+}
+
+#main .bottom .metadata{
+    font-size: .8rem;
+    color: grey;
+}
+
+#main .bottom .metadata > span{
+    margin-right: .3rem;
+}
+
+#main .bottom .btngroup > a{
+    margin-left: .5rem;
+
+}
+
+#main .channel{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#main .left{
+    display: flex;
+    align-items: center;
+}
+#main .left > a > img   {
+    border-radius: 50%;
+}
+#main .left .info{
+    margin-left: .5rem;
+}
+
+#main .details{
+    margin-left: 2.2rem;
+    margin-top: 1rem;
+}
+
+#list{
+    grid-area: list;
+}
+
+#list li{
+    display: flex;
+    align-items: center;
+    margin-bottom: .5rem;
+}
+
+#list li .rights{
+    margin-left: .5rem;
+}
+
+#list li > .title{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+#list li .cname,
+#list li .metadata{
+    font-size: .8rem;
+    color: grey;
+}
 

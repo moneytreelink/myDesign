@@ -135,6 +135,7 @@ a{
 #list li{
     display: flex;
     align-items: center;
+    margin-bottom: .5rem;
 }
 
 #list .title{
@@ -151,4 +152,5 @@ a{
 
 #list .metadata > span{
     margin-right: .2rem;
+
 }
