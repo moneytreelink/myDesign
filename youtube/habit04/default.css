@@ -28,10 +28,105 @@ font-size: var(--font-large);
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: black;
 }
 
 body {
     font-family:'Malgun Gothic','맑은 고딕',돋움,Dotum,굴림,Gulim,'Apple SD Gothic Neo',sans-serif;
 }
 
+.container{
+    display: grid;
+    grid-template: 1fr 1fr / 7fr 3fr;
+    grid-template-areas:
+    "player list"
+    "main list";
+    height: 100vh;
+    padding: 1rem;
+    gap: 1rem;
+}
 
+#player{
+    grid-area: player;
+}
+
+#player>video{
+    width: 100%;
+    height: 100%;
+}
+
+#main{
+    grid-area: main;
+}
+
+#main .tag{
+    margin-top: 1rem;
+}
+
+#main .tag >a{
+    color: blue;
+
+}
+
+#main .title{
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+#main .bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #777777;
+}
+
+#main .metadata{
+    font-size: .8rem    ;
+    color: grey;
+}
+
+#main .channel{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#main .channel .left{
+    display: flex;
+    align-items: center;
+}
+
+#main .channel .left .info{
+    margin-left: .5rem;
+}
+
+#main .context{
+    margin-left: 2rem;
+}
+
+#list{
+    grid-area: list;
+}
+
+#list li{
+    display: flex;
+    align-items: center;
+    margin-bottom: .5rem;
+}
+
+#list .title{
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+#list .cname,#list .metadata{
+    font-size: .8rem;
+    color: grey;
+}
