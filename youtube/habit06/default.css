@@ -28,10 +28,127 @@ font-size: var(--font-large);
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    list-style: none;
 }
 
 body {
     font-family:'Malgun Gothic','맑은 고딕',돋움,Dotum,굴림,Gulim,'Apple SD Gothic Neo',sans-serif;
 }
 
+a{
+    text-decoration: none;
+    color: black;
+}
 
+#view__container{
+    display: grid;
+    grid-template: 1fr 1fr / 7fr 3fr;
+    grid-template-areas:
+    "player list"
+    "main list";
+    height: 100vh;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+#player{
+    grid-area: player;
+}
+
+#player > video{
+    width: 100%;
+    height: 100%;
+}
+
+#main{
+    grid-area: main;
+
+}
+
+#main .tags{
+    margin-top: .5rem   ;
+}
+
+#main .tags >a{
+    color: blue;
+    margin-right: .5rem;
+}
+
+#main .title{
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+#main .bottom{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #777777;
+}
+
+#main .bottom .metadata {
+    font-size: .8rem;
+    color: grey;
+}
+
+#main .bottom .metadata span{
+    margin-right: .2rem;
+}
+
+#main .bottom .btngroup > a{
+    margin-left: .5rem;
+}
+
+#main .channel{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#main .left{
+    display: flex;
+    align-items: center;
+}
+
+#main .left .info{
+    margin-left: .5rem;
+    font-size: .8rem;
+    color: #333333;
+}
+
+#main .channel .left > a > img  {
+    border-radius: 50%;
+}
+
+#main .contant{
+    margin-left: 2.2rem;
+}
+
+#list{
+    grid-area: list;
+}
+
+#list li{
+    display: flex;
+    align-items: center;
+}
+
+#list .title{
+    font-size: 1.5rem;
+    font-weight: bold;
+
+}
+
+#list .cname,
+#list .metadata{
+    font-size: .8rem    ;
+    color: grey;
+}
+
+#list .metadata > span{
+    margin-right: .2rem;
+}
